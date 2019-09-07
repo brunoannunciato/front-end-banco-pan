@@ -1,0 +1,38 @@
+.banner {
+	background: linear-gradient(to right, #59edfb 0%,#2792ec 100%);
+	padding-top: 230px;
+	color: #fff;
+	position: relative;
+
+	&::after {
+		content: url('../../images/header-cloud.png');
+		bottom: 0;
+		right: 0;
+		position: absolute;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 6.25em;
+		margin-bottom: 45px;
+	}
+
+	&__text {
+		font-size: 1.65em;
+		line-height: 47px;
+		margin-bottom: 45px;
+	}
+
+	&__button {
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.125em;
+		text-transform: uppercase;
+		padding: 15px 30px;
+		border: 2px solid #fff;
+		border-radius: 3px;
+	}
+}
