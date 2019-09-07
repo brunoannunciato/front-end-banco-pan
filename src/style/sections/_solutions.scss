@@ -1,0 +1,42 @@
+.solutions {
+	background: linear-gradient(to right, #59edfb 0%,#2792ec 100%);
+	color: #fff;
+	padding: 100px;
+
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 2.2em;
+		font-weight: lighter;
+		margin: 0 0 30px;
+	}
+
+	&__text {
+		font-size: 1.125em;
+		line-height: 35px;
+	}
+
+	&__cards-shelf {
+		display: flex;
+		justify-content: space-between;
+
+		.card {
+			align-items: center;
+			border: 1px solid #fff;
+			display: flex;
+			flex-direction: column;
+			height: 140px;
+			justify-content: center;
+			width: 140px;
+
+			&.--inverted {
+				background-color: #fff;
+				color: #5a5a5a;
+			}
+
+			&__title {
+				margin-top: 23px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
