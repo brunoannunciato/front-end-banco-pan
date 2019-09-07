@@ -6,7 +6,4 @@ body {
 
 * { box-sizing: border-box; }
 
-.container {
-	width: 75%;
-	max-width: 1168px;
-}
+.container { padding: 0 !important; }
