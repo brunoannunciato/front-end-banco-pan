@@ -1,0 +1,29 @@
+.app {
+	padding: 140px 150px;
+
+	&__title {
+		font-size: 1.875em;
+		font-weight: lighter;
+		font-family: 'Open Sans', sans-serif;
+		line-height: 40px;
+		margin: 0 0 50px;
+
+		strong {
+			font-weight: regular; 
+		}
+	}
+
+	&__text {
+		color: #7f8887;
+		font-size: 1.125em;
+		line-height: 35px;
+		margin-bottom: 75px;
+	}
+
+	&__buttons-shelf {
+		a {
+			text-decoration: none;
+			margin: 0 7px;
+		}
+	}
+}
