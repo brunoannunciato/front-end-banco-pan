@@ -4,17 +4,18 @@ const gulp = require("gulp"),
 	autoprefixer = require("autoprefixer"),
 	cssnano = require("cssnano"),
 	sourcemaps = require("gulp-sourcemaps"),
-	helper = require("gulp-sass-helper"),
 	browserSync = require("browser-sync").create()
 
 const paths = {
 	src: {
 		html: './src/*.html',
-		style: './src/style/*.scss'
+		style: './src/style/**/*.scss',
+		images: './src/images/**/*.png'
 	},
 	dist: {
 		html: './dist',
-		style: './dist/style'
+		style: './dist/style',
+		images: './dist/images'
 	}
 }
 
@@ -24,6 +25,11 @@ const extras = () => {
 
 	return gulp.src(filesSrc)
 	.pipe(gulp.dest('./dist'))
+}
+
+const images = () => {
+	return gulp.src(paths.src.images)
+	.pipe(gulp.dest(paths.dist.images))
 }
 
 const style = () => {
@@ -37,11 +43,6 @@ const style = () => {
 	.pipe(browserSync.stream())
 }
 
-const runSassLint = done => {
-	helper.sassLint({sass: {src: paths.src.style, dest: paths.dist.style}}, true)
-	done();
-};
-
 const reload = () => browserSync.reload()
 
 const watch = () => {
@@ -52,10 +53,9 @@ const watch = () => {
 	})
 
 	gulp.watch(paths.src.style, style)
-	gulp.watch(paths.src.html, reload)
+	gulp.watch(paths.src.html, extras)
+	gulp.watch(paths.src.images, images)
+	gulp.watch('./src', reload)
 }
 
-const buildStyle = gulp.series(runSassLint, style)
-
-exports.reload = gulp.series(extras, reload)
-exports.default = gulp.series(extras, buildStyle, watch)
+exports.default = gulp.parallel(gulp.series(extras, style, watch), images)
