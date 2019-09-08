@@ -10,12 +10,14 @@ const paths = {
 	src: {
 		html: './src/*.html',
 		style: './src/style/**/*.scss',
-		images: './src/images/**/*.png'
+		images: './src/images/**/*.png',
+		fonts: './src/fonts/*'
 	},
 	dist: {
 		html: './dist',
 		style: './dist/style',
-		images: './dist/images'
+		images: './dist/images',
+		fonts: './dist/fonts'
 	}
 }
 
@@ -30,6 +32,11 @@ const extras = () => {
 const images = () => {
 	return gulp.src(paths.src.images)
 	.pipe(gulp.dest(paths.dist.images))
+}
+
+const fonts = () => {
+	return gulp.src(paths.src.fonts)
+		.pipe(gulp.dest(paths.dist.fonts))
 }
 
 const style = () => {
@@ -58,4 +65,4 @@ const watch = () => {
 	gulp.watch('./src', reload)
 }
 
-exports.default = gulp.parallel(gulp.series(extras, style, watch), images)
+exports.default = gulp.parallel(gulp.series(extras, style, watch), images, fonts)
