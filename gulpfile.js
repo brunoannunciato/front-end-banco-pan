@@ -5,17 +5,20 @@ const gulp = require("gulp"),
 	cssnano = require("cssnano"),
 	sourcemaps = require("gulp-sourcemaps"),
 	browserSync = require("browser-sync").create()
+	rollup = require('gulp-rollup')
 
 const paths = {
 	src: {
 		html: './src/*.html',
 		style: './src/style/**/*.scss',
+		script: './src/script/**/*.js',
 		images: './src/images/**/*.png',
 		fonts: './src/fonts/*'
 	},
 	dist: {
 		html: './dist',
 		style: './dist/style',
+		script: './dist/script',
 		images: './dist/images',
 		fonts: './dist/fonts'
 	}
@@ -50,6 +53,17 @@ const style = () => {
 	.pipe(browserSync.stream())
 }
 
+const script = () => {
+	return gulp.src(paths.src.script)
+	.pipe(rollup({
+		input: './src/script/main.js',
+		output: {
+			format: 'amd'
+		},
+	}))
+	.pipe(gulp.dest(paths.dist.script))
+}
+
 const reload = () => browserSync.reload()
 
 const watch = () => {
@@ -59,10 +73,11 @@ const watch = () => {
 		}
 	})
 
-	gulp.watch(paths.src.style, style)
 	gulp.watch(paths.src.html, extras)
+	gulp.watch(paths.src.style, style)
+	gulp.watch(paths.src.script, script)
 	gulp.watch(paths.src.images, images)
 	gulp.watch('./src', reload)
 }
 
-exports.default = gulp.parallel(gulp.series(extras, style, watch), images, fonts)
+exports.default = gulp.parallel(gulp.series(extras, style, script, watch), images, fonts)
