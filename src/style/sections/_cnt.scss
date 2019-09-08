@@ -31,4 +31,20 @@
 		font-size: .93em;
 		text-align: center;
 	}
+
+	.carousel-indicators {
+		margin-top: 30px;
+		position: relative;
+
+		li {
+			background: #e8e8e8;
+			border: none;
+			height: 8px;
+			width: 8px;
+
+			&.active {
+				background: #2faaf1;
+			}
+		}
+	}
 }
