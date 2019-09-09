@@ -3,9 +3,18 @@
 	color: #fff;
 	padding: 100px 0;
 
+	@media (max-width: $mobile) {
+		padding: 50px 0;
+	}
+
 	&__cards-shelf {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 
 	&__card {
@@ -15,6 +24,12 @@
 		height: 170px;
 		justify-content: center;
 		width: 170px;
+
+		@media (max-width: $mobile) {
+			height: 140px;
+			margin: 5px;
+			width: 140px;
+		}
 	}
 
 	&__text {

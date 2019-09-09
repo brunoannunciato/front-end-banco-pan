@@ -1,14 +1,25 @@
 .banner {
 	background: $blue-gradient;
-	padding-top: 230px;
 	color: #fff;
+	overflow: hidden;
+	padding-top: 230px;
 	position: relative;
+
+	@media (max-width: $mobile) {
+		padding-top: 100px;
+	}
 
 	&::after {
 		content: url('../../images/header-cloud.png');
 		bottom: -10px;
 		right: 0;
 		position: absolute;
+
+		@media (max-width: $mobile) {
+			bottom: -60px;
+			right: 100%;
+			width: 10%;
+		}
 	}
 
 	.content {
@@ -18,12 +29,22 @@
 	&__title {
 		font-size: 6.25em;
 		margin-bottom: 45px;
+
+		@media (max-width: $mobile) {
+			font-size: 3em;
+			line-height: 50px;
+		}
 	}
 
 	&__text {
 		font-size: 1.65em;
 		line-height: 47px;
 		margin-bottom: 45px;
+
+		@media (max-width: $mobile) {
+			font-size: 1em;
+			line-height: 29px;
+		}
 	}
 
 	&__button {
@@ -31,5 +52,18 @@
 		font-size: 1.125em;
 		text-transform: uppercase;
 		padding: 13px 40px;
+
+		@media (max-width: $mobile) {
+			font-size: 1em;
+			margin-bottom: 20px;
+			padding: 7px 20px;
+		}
+	}
+
+	&__image {
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+			width: 90%;
+		}
 	}
 }

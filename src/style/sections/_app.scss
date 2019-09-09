@@ -1,15 +1,16 @@
 .app {
-	padding: 140px 150px;
+	padding: 140px 0 150px;
+
+	@media (max-width: $mobile) {
+		padding: 50px 0;
+	}
 
 	&__title {
-		font-size: 1.875em;
-		font-weight: lighter;
-		font-family: $title;
 		line-height: 40px;
 		margin: 0 0 50px;
 
-		strong {
-			font-weight: regular; 
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
 		}
 	}
 
@@ -18,12 +19,34 @@
 		font-size: 1.125em;
 		line-height: 35px;
 		margin-bottom: 75px;
+
+		@media (max-width: $mobile) {
+			line-height: 27px;
+			font-size: 1em;
+			margin-bottom: 25px;
+		}
 	}
 
 	&__buttons-shelf {
 		a {
 			text-decoration: none;
 			margin: 0 7px;
+
+		}
+
+		img {
+			@media (max-width: $mobile) {
+				margin-bottom: 15px;
+				width: 45%;
+			}
+
+		}
+	}
+
+	&__image {
+		@media (max-width: $mobile) {
+			margin: 0 auto 25px;
+			width: 90%;
 		}
 	}
 }

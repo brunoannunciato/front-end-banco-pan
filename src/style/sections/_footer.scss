@@ -4,6 +4,10 @@
 		display: flex;
 		justify-content: flex-end;
 		padding: 40px 0;
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
 	}
 
 	&__social-media {

@@ -1,0 +1,15 @@
+.section {
+	&__title {
+		font-family: $title;
+		font-size: 2.2em;
+		line-height: 55px;
+		font-weight: lighter;
+
+		strong {font-weight: regular}
+
+		@media (max-width: $mobile) {
+			font-size: 1.5em;
+			line-height: 35px;
+		}
+	}
+}

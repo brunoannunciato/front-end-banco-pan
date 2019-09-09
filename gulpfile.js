@@ -58,7 +58,7 @@ const script = () => {
 	.pipe(rollup({
 		input: './src/script/main.js',
 		output: {
-			format: 'amd'
+			format: 'cjs'
 		},
 	}))
 	.pipe(gulp.dest(paths.dist.script))

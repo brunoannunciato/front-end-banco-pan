@@ -1,6 +1,10 @@
 .email-ads {
 	padding: 100px 0;
 
+	@media (max-width: $mobile) {
+		padding: 50px 0;
+	}
+
 	&__content {
 		align-items: center;
 		display: flex;
@@ -9,16 +13,16 @@
 	}
 
 	&__title {
-		font-size: 2.2em;
-		font-family: $title;
-		font-weight: lighter;
 		margin-bottom: 50px;
-
-		strong {font-weight: bold;}
 	}
 
 	&__form {
 		display: flex;
+
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 
 	&__input {
@@ -30,6 +34,11 @@
 		margin-right: 15px;
 		padding: 20px;
 		width: 425px;
+
+		@media (max-width: $mobile) {
+			width: 90%;
+			margin-bottom: 15px;
+		}
 	}
 	
 	&__button {

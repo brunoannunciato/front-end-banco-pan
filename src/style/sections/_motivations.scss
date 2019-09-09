@@ -2,12 +2,12 @@
 	background-color: #fafafa;
 	padding: 140px 0 150px;
 
+	@media (max-width: $mobile) {
+		padding: 50px 0;
+	}
+
 	&__title {
 		color: #141414;
-		font-family: $title;
-		font-size: 2.2em;
-		font-weight: lighter;
-		line-height: 50px;
 		margin: 0 0 30px;
 		width: 80%;
 	}
@@ -17,6 +17,12 @@
 		color: #7f8887;
 		line-height: 30px; 
 		margin: 0 0 60px;
+
+		@media (max-width: $mobile) {
+			font-size: 1em;
+			line-height: 27px;
+			margin-bottom: 25px; 
+		}
 	}
 
 	&__link {
@@ -24,6 +30,11 @@
 		padding: 10px 33px;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		@media (max-width: $mobile) {
+			font-size: 1em;
+			padding: 5px 16px;
+		}
 	}
 
 	&__cards {
@@ -31,8 +42,20 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
+		@media (max-width: $mobile) {
+			margin-top: 50px;
+			justify-content: center;
+		}
+
 		.card {
 			text-align: center;
+
+			@media (max-width: $mobile) {
+				align-items: center;
+				display: flex;
+				flex-direction: column; 
+				width: 45%;
+			}
 
 			&.--inverted {
 
@@ -50,6 +73,10 @@
 				justify-content: center;
 				margin: 0 40px 30px 40px;
 				width: 105px;
+
+				@media (max-width: $mobile) {
+				margin: 0 0 15px 0;
+				}
 			}
 
 			&__title {

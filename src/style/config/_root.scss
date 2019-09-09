@@ -6,4 +6,10 @@ body {
 
 * { box-sizing: border-box; }
 
-.container { padding: 0 !important; }
+.container {
+	padding: 0 !important;
+	
+	@media (max-width: $mobile) {
+		width: 90% !important;
+	}
+}
