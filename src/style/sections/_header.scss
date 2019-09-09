@@ -9,7 +9,7 @@
 	transition: all .4s ease;
 
 	@media (max-width: $mobile) {
-		display: none;
+	
 	}
 
 	&.--fixed {
@@ -25,6 +25,11 @@
 		.menu {
 			&__item {
 				font-size: 1em;
+
+				@media (max-width: $mobile) {
+					font-size: .85em;
+					padding: 0 8px;
+				}
 			}
 		}
 	}

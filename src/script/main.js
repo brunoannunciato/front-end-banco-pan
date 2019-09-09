@@ -1,11 +1,15 @@
 const pinHeader = () => {
 	const header = document.querySelector('.header');
 
-	document.addEventListener('scroll', () => {
-		const currentScroll = window.scrollY;
+	window.innerWidth <= 768 && header.classList.add('--fixed');
 
-		currentScroll > 0 ? header.classList.add('--fixed') : header.classList.remove('--fixed');
-	});
+	if (window.innerWidth > 768) {
+		document.addEventListener('scroll', () => {
+			const currentScroll = window.scrollY;
+
+			currentScroll > 0 ? header.classList.add('--fixed') : header.classList.remove('--fixed');
+		});
+	}
 };
 
 const scrollToSection = () => {
