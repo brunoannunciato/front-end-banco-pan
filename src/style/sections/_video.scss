@@ -40,4 +40,23 @@
 			font-size: 1em;
 		}
 	}
+
+	.modal-dialog {
+		height: 90%;
+		max-width: 90%;
+
+		@media (max-width: $mobile) {
+			margin: 5% auto;
+		}
+	}
+
+	.modal-content {
+		height: 90%;
+	}
+
+	.video {
+		height: 100%;
+		padding: 0;
+		width: 100%;
+	}
 }

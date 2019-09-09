@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	pinHeader()
 	scrollToSection()
+	handleVideo()
 })
 
 const pinHeader = () => {
@@ -26,5 +27,17 @@ const scrollToSection = () => {
 				behavior: 'smooth' 
 			});
 		})
+	})
+}
+
+const handleVideo = () => {
+	const video = document.querySelector('#video')
+
+	document.querySelector('#video-modal').addEventListener('show.bs.modal', () => {
+		video.setAttribute('src', 'https://www.youtube.com/embed/x-QKn_GxLwU?autoplay=1')
+	})
+
+	document.querySelector('#video-modal').addEventListener('hide.bs.modal', () => {
+		video.setAttribute('src', '')
 	})
 }
