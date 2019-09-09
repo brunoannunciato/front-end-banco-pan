@@ -7,20 +7,26 @@
     "bootstrap-scss": "^4.3.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.6.0",
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-load-plugins": "^2.0.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-rollup": "^2.16.2",
     "gulp-sass": "^4.0.2",
     "gulp-sass-helper": "^1.11.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
-    "stylelint-scss": "^3.10.1",
-    "tiny-slider": "^2.9.2"
+    "stylelint-scss": "^3.10.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -4,8 +4,10 @@ const gulp = require("gulp"),
 	autoprefixer = require("autoprefixer"),
 	cssnano = require("cssnano"),
 	sourcemaps = require("gulp-sourcemaps"),
-	browserSync = require("browser-sync").create()
-	rollup = require('gulp-rollup')
+	browserSync = require("browser-sync").create(),
+	concat = require('gulp-concat'),
+	babel = require("gulp-babel"),
+	$ = require('gulp-load-plugins')()
 
 const paths = {
 	src: {
@@ -55,13 +57,16 @@ const style = () => {
 
 const script = () => {
 	return gulp.src(paths.src.script)
-	.pipe(rollup({
-		input: './src/script/main.js',
-		output: {
-			format: 'cjs'
-		},
-	}))
+	.pipe(babel())
 	.pipe(gulp.dest(paths.dist.script))
+}
+
+const scriptLint = () => {
+	return gulp.src([paths.src.script, '!src/script/bootstrap.min.js'])
+	.pipe($.eslint({
+		'configFile': '.eslintrc.js'
+	}))
+	.pipe($.eslint.format())
 }
 
 const reload = () => browserSync.reload()
@@ -75,9 +80,10 @@ const watch = () => {
 
 	gulp.watch(paths.src.html, extras)
 	gulp.watch(paths.src.style, style)
+	gulp.watch(paths.src.script, scriptLint)
 	gulp.watch(paths.src.script, script)
 	gulp.watch(paths.src.images, images)
 	gulp.watch('./src', reload)
 }
 
-exports.default = gulp.parallel(gulp.series(extras, style, script, watch), images, fonts)
+exports.default = gulp.parallel(gulp.series(extras, style, script, scriptLint, watch),images, fonts)
