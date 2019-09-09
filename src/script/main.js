@@ -34,7 +34,7 @@ const handleVideo = () => {
 	document.querySelector('#video-modal').addEventListener('hide.bs.modal', () => {
 		video.setAttribute('src', '');
 	});
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
 	pinHeader();
