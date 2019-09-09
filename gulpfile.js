@@ -5,7 +5,6 @@ const gulp = require("gulp"),
 	cssnano = require("cssnano"),
 	sourcemaps = require("gulp-sourcemaps"),
 	browserSync = require("browser-sync").create(),
-	concat = require('gulp-concat'),
 	babel = require("gulp-babel"),
 	$ = require('gulp-load-plugins')()
 
