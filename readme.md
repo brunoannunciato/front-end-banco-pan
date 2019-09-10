@@ -3,6 +3,8 @@
 
 Teste para vaga de front-end para o departamento de CRM do banco Pan.
 
+A Landing page está hospedada em: [https://bancopan.bruno.dev/](https://bancopan.bruno.dev/)
+
 ## Landing Page:
 
 ### Começando:
@@ -11,8 +13,8 @@ Siga os passos abaixo para efetuar a instalação dos requisitos para o projeto.
 #### Requisitos:
 
 
-    node
-    npm ou yarn
+	node
+	npm ou yarn
 
 #### Instalação:
 
@@ -40,8 +42,10 @@ Os arquivos gerados irão para o diretório './dist'
 
 ###  Desenvolvimento:
 
-- Foi ultilizado Gulp para o gerenciamento de todas as dependências do projeto
+- Foi ultilizado Gulp para o gerenciamento de todas as dependências do projeto.
 - Como havia preferência pela criação de estilos sem o uso de framework, utilizei bootstrap apenas para a criação do slider e da modal, além de usar os componentes de botão e grid.
+- Para o desenvolvimento do projeto, foi ultilizado o lint do Airbnb com algumas alterações.
+- O projeto está sendo hospedado pelo netlify.
 
 ### Depêndecias:
 - [Gulp.js](https://gulpjs.com/) - Atumatizador de tarefas;
