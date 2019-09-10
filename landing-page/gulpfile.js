@@ -86,3 +86,4 @@ const watch = () => {
 }
 
 exports.default = gulp.parallel(gulp.series(extras, style, script, scriptLint, watch),images, fonts)
+exports.build = gulp.parallel(gulp.series(extras, style, script, scriptLint),images, fonts)
