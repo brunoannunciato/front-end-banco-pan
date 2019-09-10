@@ -34,7 +34,7 @@ Para rodar localmente o projeto, ultilize os comandos:
 #### Gerar arquivos:
 
 Para gerar os arquivos estáticos deverá ser rodado:
-`gulp`
+`gulp build`
 
 Os arquivos gerados irão para o diretório './dist'
 
