@@ -53,35 +53,57 @@
 			@media (max-width: $mobile) {
 				align-items: center;
 				display: flex;
-				flex-direction: column; 
+				flex-direction: column;
+				margin-bottom: 20px;
 				width: 45%;
 			}
 
-			&.--inverted {
-
+			&:hover {
 				.card__title {
 					color: $primary;
 				}
+
+				.card__icon {
+					@for $i from 1 to 7 {
+						&.icon-0#{$i} {
+							&::after {
+								content: url('../images/motivations-icon-0#{$i}--blue.png');
+							}
+						}
+					}
+				}
 			}
 
-			&__image {
+			&__icon {
 				align-items: center;
 				background-color: #fff;
 				border-radius: 100%;
 				display: flex;
 				height: 105px;
 				justify-content: center;
-				margin: 0 40px 30px 40px;
+				margin: 0 40px 15px 40px;
+				position: relative;
 				width: 105px;
 
+				@for $i from 1 to 7 {
+					&.icon-0#{$i} {
+						&::after {
+							content: url('../images/motivations-icon-0#{$i}.png');
+						}
+					}
+				}
+				
 				@media (max-width: $mobile) {
-				margin: 0 0 15px 0;
+					margin: 0 0 15px 0;
 				}
 			}
 
 			&__title {
 				color: #777;
+				font-weight: 400;
+				margin-bottom: 25px;
 				text-transform: uppercase;
+				transition: all .3s ease;
 			}
 		}
 	}
