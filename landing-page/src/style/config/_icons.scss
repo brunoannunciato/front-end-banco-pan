@@ -13,38 +13,57 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-google {
-  &:before {
-	content: $icon-google; 
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: '#{$icomoon-font-family}' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
   }
-}
-.icon-youtube {
-  &:before {
-	content: $icon-youtube; 
+  
+  .icon-youtube {
+	&:before {
+		content: $icon-youtube; 
+	}
   }
-}
-.icon-facebook {
-  &:before {
-	content: $icon-facebook; 
+  .icon-google {
+	&:before {
+		content: $icon-google; 
+	}
   }
-}
-.icon-twitter {
-  &:before {
-	content: $icon-twitter; 
+  .icon-solutions-icon-01 {
+	&:before {
+		content: $icon-solutions-icon-01;
+	}
   }
-}
-
+  .icon-solutions-icon-02 {
+	&:before {
+		content: $icon-solutions-icon-02;
+	}
+  }
+  .icon-solutions-icon-03 {
+	&:before {
+		content: $icon-solutions-icon-03;
+	}
+  }
+  .icon-solutions-icon-04 {
+	&:before {
+		content: $icon-solutions-icon-04;
+	}
+  }
+  .icon-facebook {
+	&:before {
+		content: $icon-facebook; 
+	}
+  }
+  .icon-twitter {
+	&:before {
+		content: $icon-twitter; 
+	}
+  }

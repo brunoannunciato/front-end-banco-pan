@@ -38,18 +38,27 @@
 			height: 140px;
 			justify-content: center;
 			width: 140px;
+			transition: all .3s ease;
 
 			@media (max-width: $mobile) {
 				margin: 5px;
 			}
 
-			&.--inverted {
+			[class*=icon] {
+				font-size: 2em;
+			}
+
+			&:hover {
 				background-color: #fff;
 				color: #5a5a5a;
+
+				[class*=icon] {
+					color: #47a4d7;
+				}
 			}
 
 			&__title {
-				margin-top: 23px;
+				margin-top: 10px;
 				text-transform: uppercase;
 			}
 		}
