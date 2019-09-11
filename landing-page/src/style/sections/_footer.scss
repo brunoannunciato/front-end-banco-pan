@@ -29,15 +29,22 @@
 			height: 40px;
 			justify-content: center;
 			margin: 0 7px;
+			transition: all .3s ease;
 			width: 40px;
 
 			a {
+				line-height: 0;
 				text-decoration: none;
 				
 				span::before {
 					color: #fff;
 					font-size: 1.125em;
 				}
+			}
+			
+			&::hover {
+				background-color: #109aea;
+				border-color: #0f92de;
 			}
 		}
 	}
