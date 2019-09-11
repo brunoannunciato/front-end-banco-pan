@@ -2,12 +2,18 @@
 	&__content {
 		border-top: 1px solid $primary;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		padding: 40px 0;
 
 		@media (max-width: $mobile) {
 			justify-content: center;
+			flex-wrap: wrap;
 		}
+	}
+
+	&__copyright {
+		color: #777777;
+		font-size: 1em;
 	}
 
 	&__social-media {
