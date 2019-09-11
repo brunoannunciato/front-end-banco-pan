@@ -136,3 +136,4 @@ Os arquivos gerados irão para o diretório './dist'
 - Pelo fato de disparo de formulário não ser funcional no Outlook, ocultei a sessão de formulário apenas nele.
 - Foi utilizado Email on Acid e Puts Mails para a realização dos testes.
 - As imagens do e-mail tiveram seu peso otimizado pelo photoshop e tinypng.
+- O layout foi adaptado de acordo com os requisitos da documentação e a limitação dos leitores de email com as tecnologias de desenvolvimento utilizadas.
